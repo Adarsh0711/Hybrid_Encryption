@@ -1,4 +1,4 @@
-# myrep
+# Hybrid_Encryption
 
 Security is nothing but protecting data and other information from unauthorised persons to access, destruction or change our data.In this world, cybersecurity is incredibly important be- cause we've got our privacy at stake.So to counter this we'll design an encrypted chat employ- ing a hybrid cryptographic system in java using AES(advanced encryption standard) and RSA(Rivest–Shamir–Adleman ) for encryption.
 
