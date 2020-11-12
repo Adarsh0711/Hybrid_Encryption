@@ -1,1 +1,5 @@
 # myrep
+
+Security is nothing but protecting data and other information from unauthorised persons to access, destruction or change our data.In this world, cybersecurity is incredibly important be- cause we've got our privacy at stake.So to counter this we'll design an encrypted chat employ- ing a hybrid cryptographic system in java using AES(advanced encryption standard) and RSA(Rivest–Shamir–Adleman ) for encryption.
+
+RSA is employed to verify the intended recipient and to transfer the AES key. AES is em- ployed then to encrypt the messages passed between the 2 users. First the Client transfers the AES key (encrypted using public key of recipient with RSA) to the recipient(Server).Server then decrypts the message using its private key to urge AES key which is employed to en- crypt and decrypt further messages.RSA utilized in EBC(electronic code book) mode with 1024 bit key and AES with 128 bit key. AES is implemented with dynamic Key based SBox. Using this method messages will be securely passed between the 2 users.
