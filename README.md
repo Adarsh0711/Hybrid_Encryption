@@ -1,10 +1,7 @@
 # Hybrid_Encryption
 
 ### About
-
-Security is nothing but protecting data and other information from unauthorised persons to access, destruction or change our data.In this world, cybersecurity is incredibly important be- cause we've got our privacy at stake.So to counter this we'll design an encrypted chat employ- ing a hybrid cryptographic system in java using AES(advanced encryption standard) and RSA(Rivest–Shamir–Adleman ) for encryption.
-
-RSA is employed to verify the intended recipient and to transfer the AES key. AES is em- ployed then to encrypt the messages passed between the 2 users. First the Client transfers the AES key (encrypted using public key of recipient with RSA) to the recipient(Server).Server then decrypts the message using its private key to urge AES key which is employed to en- crypt and decrypt further messages.RSA utilized in EBC(electronic code book) mode with 1024 bit key and AES with 128 bit key. AES is implemented with dynamic Key based SBox. Using this method messages will be securely passed between the 2 users.
+This project focuses on designing a secure encrypted chat application using Java. The system employs a hybrid cryptographic approach, integrating AES (Advanced Encryption Standard) and RSA (Rivest-Shamir-Adleman) to ensure data security. In this application, RSA is used to verify the intended recipient and securely transfer the AES key. The client encrypts the AES key using the recipient's public key with RSA and sends it to the server. The server then decrypts the AES key using its private key. Once the AES key is exchanged, it is used to encrypt and decrypt messages between users. RSA is utilized in Electronic Code Book (EBC) mode with a 1024-bit key, while AES uses a 128-bit key and is implemented with a dynamic key-based S-Box. This method ensures that messages are securely transmitted between users, protecting data from unauthorized access, alteration, or destruction.
 
 ### Features
 
