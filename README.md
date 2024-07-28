@@ -14,3 +14,8 @@ Dynamic S-Box: Implements AES with a dynamic key-based S-Box for enhanced securi
 End-to-End Encryption: Ensures that all messages between users are encrypted and decrypted using AES, protecting the data during transmission.
 Public/Private Key Management: Uses RSA in Electronic Code Book (EBC) mode with a 1024-bit key for verifying recipients and transferring the AES key securely.
 User Authentication: RSA verifies the identity of users, ensuring that messages are sent to the correct recipient.
+
+### Demo Pictures
+
+![Screenshot 2024-07-28 at 17 45 07](https://github.com/user-attachments/assets/000b722a-c7ad-45e8-b5c6-1edfde380846)
+
