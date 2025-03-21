@@ -1,16 +1,25 @@
 # Hybrid_Encryption
 
-### About
-This project focuses on designing a secure encrypted chat application using Java. The system employs a hybrid cryptographic approach, integrating AES (Advanced Encryption Standard) and RSA (Rivest-Shamir-Adleman) to ensure data security. In this application, RSA is used to verify the intended recipient and securely transfer the AES key. The client encrypts the AES key using the recipient's public key with RSA and sends it to the server. The server then decrypts the AES key using its private key. Once the AES key is exchanged, it is used to encrypt and decrypt messages between users. RSA is utilized in Electronic Code Book (EBC) mode with a 1024-bit key, while AES uses a 128-bit key and is implemented with a dynamic key-based S-Box. This method ensures that messages are securely transmitted between users, protecting data from unauthorized access, alteration, or destruction.
+🔧 System Architecture Overview
+This project implements a secure, real-time chat application using a multithreaded client-server architecture in Java. The system is designed to ensure confidentiality, authenticity, and integrity of messages through a hybrid encryption approach combining RSA and AES with a dynamic key-based S-Box.
 
-### Features
+🧠 Key Components
+Client Module
+Each client establishes a socket connection to the server and operates on a separate thread, enabling multiple users to send and receive messages simultaneously. The client is responsible for encrypting messages using AES and securely sending the AES key using RSA.
 
-Hybrid Cryptographic System: Utilizes both AES (Advanced Encryption Standard) and RSA (Rivest-Shamir-Adleman) for robust encryption.
-Secure Key Exchange: Employs RSA for secure transmission of the AES key, ensuring that only the intended recipient can decrypt it.
-Dynamic S-Box: Implements AES with a dynamic key-based S-Box for enhanced security.
-End-to-End Encryption: Ensures that all messages between users are encrypted and decrypted using AES, protecting the data during transmission.
-Public/Private Key Management: Uses RSA in Electronic Code Book (EBC) mode with a 1024-bit key for verifying recipients and transferring the AES key securely.
-User Authentication: RSA verifies the identity of users, ensuring that messages are sent to the correct recipient.
+Server Module
+The server listens for incoming client connections on a dedicated thread. For each client, a new thread is spawned to manage bidirectional encrypted communication. The server decrypts the AES key using its private RSA key and forwards encrypted messages to recipients.
+
+Encryption Layer
+
+RSA (1024-bit, ECB mode): Used for user authentication and secure transmission of AES keys.
+AES (128-bit): Handles message encryption and decryption. Enhanced with a custom dynamic S-Box for additional complexity and protection against cryptographic attacks.
+🔐 Security Highlights
+Hybrid Cryptography: Combines the speed of symmetric encryption (AES) with the security of asymmetric encryption (RSA).
+Dynamic S-Box: Adds a unique, key-dependent transformation layer to AES, increasing resistance to differential and linear cryptanalysis.
+Multithreading: Supports multiple simultaneous connections and real-time messaging through concurrent threads for each client.
+End-to-End Encryption: Messages remain encrypted throughout the transmission path, accessible only to sender and intended recipient.
+
 
 ### Demo Pictures
 
